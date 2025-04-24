@@ -14,7 +14,7 @@ type ImagemKey = keyof IImagens;
 
 interface Props {
     imagem?: ImagemKey;
-    children: React.ReactNode;
+    children?: React.ReactNode;
 }
 
 const SpanEstilizado = styled.span<{ imagem?: string }>`

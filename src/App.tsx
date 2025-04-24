@@ -11,8 +11,6 @@ function App() {
     <Container>
       <Titulo>Área Administrativa</Titulo>
     </Container>
-    
-
     <Rodape />
    
     </>
