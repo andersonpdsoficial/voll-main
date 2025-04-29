@@ -22,6 +22,7 @@ const useDadosGrafico = ({ profissionais, consultas }: Props) => {
             ).length
         }))
     }
+    return dados;
 }
 
 export default useDadosGrafico;

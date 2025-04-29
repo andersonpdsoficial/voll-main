@@ -7,10 +7,12 @@ export default function useFetch<T>(url: string) {
 
     useEffect(() => {
         fetch(`http://localhost:8080/${url}`).then(
+            
             resposta => resposta.json()
+            
         ).then(dados => setDados(dados)).catch((erro => setErro(erro)))
     }, [url])
-
+    // console.log('esse é os dados do useEffect',dados)
     return { dados, erro };
 
 }
