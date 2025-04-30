@@ -21,6 +21,22 @@ const ListaEstilizada = styled.ul`
 
 const ItemEstilizado = styled.li`
     list-style-type: none;
+    margin: 0 1em;
+    width: 2px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+const ParagrafoEstilizado = styled.p`
+    font-size: 14px;
+    margin-top: 1em;
+    font-weight: 700;
+    color: var(--branco);
+    align-items: center;
+    display: flex;
+    justify-content: center;
 `
 
 function Rodape() {
@@ -48,7 +64,7 @@ function Rodape() {
                     </a>
                 </ItemEstilizado>
             </ListaEstilizada>
-            <p>2023 © </p>
+            <ParagrafoEstilizado>2023 © </ParagrafoEstilizado>
         </RodapeEstilizado>
     )
 }

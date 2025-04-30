@@ -5,11 +5,10 @@ import styled from "styled-components";
 
 const CelulaEstilizada = styled(TableCell)({
     [`&.${tableCellClasses.head}`]: {
-        backgroundColor: '#1976d2', 
-        color: '#fff',
+        color: "var(--azul-escuro)",
         fontSize: 18,
         fontWeight: 700,
-        textAlign: 'center',
+        fontFamily: "var(--fonte-principal)",
     },
     [`&.${tableCellClasses.body}`]: {
         fontSize: 16,   
@@ -44,7 +43,7 @@ function Tabela({consultas}: {consultas: IConsulta[]| null}) {
                             return (
                                 <LinhaEstilizada >
                                     <CelulaEstilizada component="th" scope="row">{new Date(linha.data).toLocaleDateString()}</CelulaEstilizada>
-                                    <CelulaEstilizada>{linha.hora}</CelulaEstilizada>
+                                    <CelulaEstilizada>{linha.horario}</CelulaEstilizada>
                                     <CelulaEstilizada>{linha.profissional[0].nome}</CelulaEstilizada>
                                     <CelulaEstilizada>{linha.profissional[0].especialidade}</CelulaEstilizada>
                                     <CelulaEstilizada>{linha.paciente}</CelulaEstilizada>
