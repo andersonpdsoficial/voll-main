@@ -12,27 +12,42 @@ const ContainerEstilizado = styled.div`
     color: var(--cinza);
     margin: 1em 2em 1em;
     `
+    
+const ItemEstilizado = styled.li`
+list-style-type: none;
+`
 
+const ParagrafoNomeEstilizado = styled.p`
+    font-weight: 700;
+    font-size: 14px;
+`
+const ListaEstilizada = styled.ul`
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+`
 function Card({profissional} : {profissional: IProfissional}) {
     return (
         <ContainerEstilizado>
-            <ul>
-                <li>
+            <ListaEstilizada>
+                <ItemEstilizado>
                     <img src={profissional.imagem} 
                     alt={`Foto de perfil do profissional ${profissional.nome}`} />
-                </li>
-                <li>
-                    <p>{profissional.nome}</p>
-                    <p>{profissional.especialidade}</p>
-                </li>
-                <li>
+                </ItemEstilizado>
+                <ItemEstilizado>
+                    <ParagrafoNomeEstilizado>{profissional.nome}</ParagrafoNomeEstilizado>
+                    <ParagrafoNomeEstilizado>{profissional.especialidade}</ParagrafoNomeEstilizado>
+                </ItemEstilizado>
+                <ItemEstilizado>
                     <Rating
                         name="half-rating-read"
                         value={profissional.nota}
                         readOnly = {true}
                     />
-                </li>
-            </ul>
+                </ItemEstilizado>
+            </ListaEstilizada>
         </ContainerEstilizado>
     )
 }
