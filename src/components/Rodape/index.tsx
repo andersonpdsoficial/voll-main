@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import facebook from '../Rodape/assets/facebook.png'
 import instagram from '../Rodape/assets/instagram.png'
 import whatsapp from '../Rodape/assets/whatsapp.png'
+import google from '../Rodape/assets/google.png';
 
 const RodapeEstilizado = styled.footer`
 height: 100%;
@@ -27,26 +28,29 @@ function Rodape() {
         <RodapeEstilizado>
             <ListaEstilizada>
                 <ItemEstilizado>
-                    <button
-                        onClick={() => {
-                            console.log('Social media icons clicked');
-                        }}
-                        style={{
-                            background: 'none',
-                            border: 6,
-                            padding: 0,
-                            cursor: 'pointer',
-                        }}
-                    >
+                    <a href="#">
                         <img src={facebook} alt="logo do facebook" />
-                        <img src={instagram} alt="logo do instagram" />
+                    </a>
+                </ItemEstilizado>
+                <ItemEstilizado>
+                    <a href="#">
                         <img src={whatsapp} alt="logo do whatsapp" />
-                    </button>
+                    </a>
+                </ItemEstilizado>
+                <ItemEstilizado>
+                    <a href="#">
+                        <img src={google} alt="logo do google" />
+                    </a>
+                </ItemEstilizado>
+                <ItemEstilizado>
+                    <a href="#">
+                        <img src={instagram} alt="logo do instagram" />
+                    </a>
                 </ItemEstilizado>
             </ListaEstilizada>
-            <p>2025  Desenvolvido por Anderson | Projeto ficticio</p>
-        </RodapeEstilizado >
+            <p>2023 © </p>
+        </RodapeEstilizado>
     )
 }
 
-export default Rodape
+export default Rodape;
